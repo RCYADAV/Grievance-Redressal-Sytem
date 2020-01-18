@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/GrievenceRedressal').then(()=> console.log("Connected to database"))
+mongoose.connect('mongodb+srv://Yash2412:yash2412@cluster0-6rqau.mongodb.net/GrievanceRedressal').then(()=> console.log("Connected to database"))
 
 const schema=new mongoose.Schema({
     username:String,
@@ -12,13 +12,8 @@ const schema=new mongoose.Schema({
     password:String,
     email:String,
     college:String,
-    image: [String],
-    
-
-
-
-
-
+    image: String,
 });
+
 const comitte = mongoose.model('comitte' , schema);
 module.exports =comitte;
